@@ -17,7 +17,7 @@ const purchasedDesigns = [
 
 const Section = ({ title, children }) => (
   <section className="space-y-4">
-    <h2 className="text-2xl font-bold text-[#1a1a1a] border-l-4 border-[#5c6ac4] pl-3">
+    <h2 className="text-2xl font-bold text-[#14532d] border-l-4 border-[#4ade80] pl-3">
       {title}
     </h2>
     {children}
@@ -26,10 +26,10 @@ const Section = ({ title, children }) => (
 
 const ProfilePage = () => {
   return (
-    <div className="max-w-7xl mx-auto px-6 py-12 space-y-16 bg-gradient-to-b from-[#fafafa] to-[#f1f1f1] text-[#1e1e1e] font-sans">
+    <div className="max-w-7xl mx-auto px-6 py-12 space-y-16 bg-gradient-to-b from-[#f0fdf4] via-[#ecfdf5] to-[#e0f2fe] text-[#1e1e1e] font-sans">
       <div className="text-center space-y-2">
-        <h1 className="text-4xl font-extrabold tracking-tight">Hồ sơ của bạn</h1>
-        <p className="text-[#666] text-sm">Khám phá các kết nối và thiết kế cá nhân</p>
+        <h1 className="text-4xl font-extrabold tracking-tight text-[#065f46]">Hồ sơ của bạn</h1>
+        <p className="text-[#4b5563] text-sm">Khám phá các kết nối và thiết kế cá nhân</p>
       </div>
 
       <Section title="Stylist đã kết nối">
@@ -42,9 +42,9 @@ const ProfilePage = () => {
               <img
                 src={stylist.avatar}
                 alt={stylist.name}
-                className="w-16 h-16 rounded-full object-cover shadow-md"
+                className="w-16 h-16 rounded-full object-cover shadow-md border-2 border-[#22c55e]"
               />
-              <span className="text-sm font-medium">{stylist.name}</span>
+              <span className="text-sm font-medium text-[#065f46]">{stylist.name}</span>
             </div>
           ))}
         </div>
@@ -55,17 +55,17 @@ const ProfilePage = () => {
           {savedDesigns.map((design) => (
             <div
               key={design.id}
-              className="relative rounded-xl overflow-hidden bg-white border border-neutral-200 shadow-sm hover:shadow-md transition"
+              className="relative rounded-xl overflow-hidden bg-white border border-green-200 shadow-sm hover:shadow-md transition"
             >
               <img
                 src={design.image}
                 alt={design.title}
                 className="w-full h-48 object-cover"
               />
-              <div className="absolute bottom-2 right-2 bg-black bg-opacity-50 text-white text-xs px-2 py-0.5 rounded-full">
+              <div className="absolute bottom-2 right-2 bg-green-600 text-white text-xs px-2 py-0.5 rounded-full">
                 aodaiverse
               </div>
-              <div className="p-3 text-sm font-semibold text-[#333]">{design.title}</div>
+              <div className="p-3 text-sm font-semibold text-[#065f46]">{design.title}</div>
             </div>
           ))}
         </div>
@@ -76,7 +76,7 @@ const ProfilePage = () => {
           {purchasedDesigns.map((design) => (
             <div
               key={design.id}
-              className="relative rounded-xl overflow-hidden bg-white border border-neutral-200 shadow-sm hover:shadow-md transition"
+              className="relative rounded-xl overflow-hidden bg-white border border-green-200 shadow-sm hover:shadow-md transition"
             >
               <img
                 src={design.image}
@@ -86,7 +86,7 @@ const ProfilePage = () => {
               <div className="absolute bottom-2 right-2 w-10 h-10 bg-white p-1 rounded border border-neutral-300 shadow">
                 <img src={design.qr} alt="QR" className="w-full h-full object-contain" />
               </div>
-              <div className="p-3 text-sm font-semibold text-[#333]">{design.title}</div>
+              <div className="p-3 text-sm font-semibold text-[#065f46]">{design.title}</div>
             </div>
           ))}
         </div>
