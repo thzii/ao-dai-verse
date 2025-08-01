@@ -9,6 +9,10 @@ import GalleryPage from './pages/GalleryPage'
 import SketchWeekPage from './pages/SketchWeekPage'
 import AboutPage from './pages/AboutPage'
 import ContactPage from './pages/ContactPage'
+import CommunityPage from './features/community/CommunityPage'
+import MarketplacePage from './features/marketplace/MarketplacePage'
+import EducationPage from './features/education/EducationPage'
+import CopyrightProtection from './features/copyright/CopyrightProtection'
 import { useLocation } from 'react-router-dom'
 
 function App() {
@@ -34,6 +38,10 @@ function App() {
             <Route path="/sketch-week" element={<SketchWeekPage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/community" element={<CommunityPage />} />
+            <Route path="/marketplace" element={<MarketplacePage />} />
+            <Route path="/education" element={<EducationPage />} />
+            <Route path="/copyright" element={<CopyrightProtection />} />
           </Routes>
         </motion.main>
       </AnimatePresence>

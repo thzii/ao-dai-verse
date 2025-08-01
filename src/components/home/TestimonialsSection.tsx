@@ -8,7 +8,7 @@ const TestimonialsSection = () => {
       role: 'Doanh nhân',
       avatar: '👩‍💼',
       rating: 5,
-      content: 'Áo DàiVerse đã giúp tôi tạo ra chiếc áo dài hoàn hảo cho sự kiện quan trọng. Công nghệ AR thử áo thật sự tuyệt vời!',
+      content: 'AoDaiVerse đã giúp tôi tạo ra chiếc áo dài hoàn hảo cho sự kiện quan trọng. Công nghệ AR thử áo thật sự tuyệt vời!',
       design: 'Áo dài cung đình Huế'
     },
     {
@@ -40,7 +40,7 @@ const TestimonialsSection = () => {
       role: 'Giáo viên',
       avatar: '👩‍🏫',
       rating: 5,
-      content: 'Tôi đã sử dụng Áo DàiVerse để thiết kế áo dài cưới cho con gái. Kết quả thật sự tuyệt vời!',
+      content: 'Tôi đã sử dụng AoDaiVerse để thiết kế áo dài cưới cho con gái. Kết quả thật sự tuyệt vời!',
       design: 'Áo dài cưới'
     },
     {
@@ -71,7 +71,7 @@ const TestimonialsSection = () => {
           </h2>
           
           <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Hàng nghìn khách hàng đã tin tưởng và sử dụng Áo DàiVerse để tạo ra 
+            Hàng nghìn khách hàng đã tin tưởng và sử dụng AoDaiVerse để tạo ra 
             những chiếc áo dài độc đáo và ý nghĩa.
           </p>
         </motion.div>

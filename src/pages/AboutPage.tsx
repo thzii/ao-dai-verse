@@ -43,25 +43,25 @@ const AboutPage = () => {
 
   const team = [
     {
-      name: 'Nguyễn Thị Mai',
+      name: 'Đặng Thị Thúy Vi',
       role: 'CEO & Founder',
       avatar: '👩‍💼',
       description: 'Chuyên gia văn hóa truyền thống với 15 năm kinh nghiệm'
     },
     {
-      name: 'Trần Văn Minh',
+      name: 'Trần Nguyễn Phú Nghĩa',
       role: 'CTO',
       avatar: '👨‍💻',
       description: 'Chuyên gia AI/ML với kinh nghiệm tại Google, Facebook'
     },
     {
-      name: 'Lê Thị Hương',
+      name: 'Nguyễn Ngọc Trúc Quỳnh',
       role: 'Head of Design',
       avatar: '👩‍🎨',
       description: 'Nhà thiết kế thời trang với bằng từ Parsons School'
     },
     {
-      name: 'Phạm Văn Dũng',
+      name: 'Huỳnh Minh Tiến',
       role: 'Head of Partnerships',
       avatar: '👨‍💼',
       description: 'Chuyên gia phát triển kinh doanh và đối tác'
@@ -101,7 +101,7 @@ const AboutPage = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed"
             >
-              Áo DàiVerse là nền tảng số tiên phong kết hợp công nghệ AI, AR và blockchain 
+              AoDaiVerse là nền tảng số tiên phong kết hợp công nghệ AI, AR và blockchain 
               để bảo tồn và phát huy giá trị văn hóa áo dài Việt Nam trong thời đại số.
             </motion.p>
           </div>
@@ -146,7 +146,7 @@ const AboutPage = () => {
                 <span className="gradient-text">Sứ mệnh</span> của chúng tôi
               </h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Áo DàiVerse được thành lập với sứ mệnh tái định nghĩa áo dài Việt Nam 
+                AoDaiVerse được thành lập với sứ mệnh tái định nghĩa áo dài Việt Nam 
                 trong thời đại số, kết hợp công nghệ tiên tiến với giá trị văn hóa truyền thống.
               </p>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
@@ -247,7 +247,7 @@ const AboutPage = () => {
               <span className="gradient-text">Đội ngũ</span> sáng lập
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Những con người đam mê văn hóa và công nghệ đứng sau Áo DàiVerse
+              Những con người đam mê văn hóa và công nghệ đứng sau AoDaiVerse
             </p>
           </motion.div>
 
