@@ -18,17 +18,21 @@ const Header = () => {
 
   const navItems = [
     { name: 'Trang chủ', path: '/' },
-    { name: 'Thiết kế', path: '/designer' },
-    { name: 'AR Thử áo', path: '/ar-try-on' },
-    { name: 'Bộ sưu tập', path: '/gallery' },
+    // { name: 'Thiết kế', path: '/designer' },
+   
+    // { name: 'Bộ sưu tập', path: '/gallery' },
     { name: 'Cộng đồng', path: '/community' },
     { name: 'Chợ thiết kế', path: '/marketplace' },
     { name: 'Giáo dục', path: '/education' },
     { name: 'Sketch Week', path: '/sketch-week' },
-    { name: 'Bảo vệ bản quyền', path: '/copyright' },
+    
     { name: 'Về chúng tôi', path: '/about' },
-    { name: 'Liên hệ', path: '/contact' },
+    
   ]
+  // { name: 'Bảo vệ bản quyền', path: '/copyright' },
+  // { name: 'AR Thử áo', path: '/ar-try-on' },
+
+
 
   return (
     <motion.header
@@ -40,8 +44,9 @@ const Header = () => {
           : 'bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+  <div className="flex justify-between items-center h-20 space-x-6">
+
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <div className="relative">
@@ -64,41 +69,52 @@ const Header = () => {
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <Link
-                key={item.path}
-                to={item.path}
-                className={`relative px-3 py-2 text-sm font-medium transition-colors duration-200 ${
-                  location.pathname === item.path
-                    ? 'text-secondary-600'
-                    : 'text-gray-700 hover:text-secondary-500'
-                }`}
-              >
-                {item.name}
-                {location.pathname === item.path && (
-                  <motion.div
-                    layoutId="activeTab"
-                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary-500 to-secondary-500"
-                  />
-                )}
-              </Link>
-            ))}
-          </nav>
+         {/* Desktop Navigation */}
+<nav className="hidden md:flex items-center space-x-6">
+  {navItems.map((item) => (
+    <Link
+      key={item.path}
+      to={item.path}
+      className={`group relative px-3 py-2 text-sm font-medium transition duration-200 ${
+        location.pathname === item.path
+          ? 'text-secondary-600'
+          : 'text-gray-700 hover:text-secondary-600'
+      }`}
+    >
+      {item.name}
+
+      {/* Active underline */}
+      {location.pathname === item.path && (
+        <motion.div
+          layoutId="activeTab"
+          className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary-500 to-secondary-500"
+        />
+      )}
+
+      {/* Hover underline */}
+      {location.pathname !== item.path && (
+        <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-400 to-secondary-400 transition-all duration-300 group-hover:w-full" />
+      )}
+    </Link>
+  ))}
+</nav>
+
 
           {/* Action Buttons */}
           <div className="hidden md:flex items-center space-x-4">
-            <button className="p-2 text-gray-600 hover:text-secondary-500 transition-colors">
-              <User className="h-5 w-5" />
-            </button>
+          <Link
+  to="/profileuser"
+  className="p-2 text-gray-600 hover:text-secondary-500 transition-colors"
+>
+  <User className="h-5 w-5" />
+</Link>
             <button className="p-2 text-gray-600 hover:text-secondary-500 transition-colors">
               <ShoppingBag className="h-5 w-5" />
             </button>
-            <button className="btn-primary text-sm py-2 px-4">
+            {/* <button className="btn-primary text-sm py-2 px-4">
               <Camera className="h-4 w-4 mr-2" />
               Thử áo AR
-            </button>
+            </button> */}
           </div>
 
           {/* Mobile menu button */}

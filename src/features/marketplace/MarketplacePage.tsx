@@ -78,7 +78,7 @@ const MarketplacePage = () => {
         originalPrice: 3000000,
         discount: 17
       },
-      images: ['/images/designs/design1-1.jpg', '/images/designs/design1-2.jpg'],
+      images: ['image/aodai-2.jpg'],
       rating: 4.9,
       reviewCount: 89,
       sales: 45,
@@ -105,7 +105,7 @@ const MarketplacePage = () => {
         amount: 3500000,
         currency: 'VND'
       },
-      images: ['/images/designs/design2-1.jpg'],
+      images: ['image/aodai.jpg'],
       rating: 4.8,
       reviewCount: 67,
       sales: 23,
@@ -134,7 +134,7 @@ const MarketplacePage = () => {
         originalPrice: 1500000,
         discount: 20
       },
-      images: ['/images/designs/design3-1.jpg', '/images/designs/design3-2.jpg'],
+      images: ['image/aodai-1.jpg'],
       rating: 4.7,
       reviewCount: 45,
       sales: 78,
@@ -152,7 +152,7 @@ const MarketplacePage = () => {
       designer: {
         id: '4',
         name: 'Phạm Văn Nam',
-        avatar: '/images/designers/designer4.jpg',
+        avatar: '/image/aodai-3.jpg',
         rating: 4.9,
         reviewCount: 134,
         verified: true
@@ -161,7 +161,7 @@ const MarketplacePage = () => {
         amount: 5000000,
         currency: 'VND'
       },
-      images: ['/images/designs/design4-1.jpg'],
+      images: ['/image/aodai-3.jpg'],
       rating: 4.9,
       reviewCount: 56,
       sales: 12,
@@ -374,34 +374,43 @@ const MarketplacePage = () => {
             >
               {/* Design Image */}
               <div className={`relative ${viewMode === 'list' ? 'w-64' : ''}`}>
-                <img
-                  src={design.images[0]}
-                  alt={design.title}
-                  className={`w-full object-cover ${viewMode === 'list' ? 'h-48' : 'h-64'}`}
-                />
-                {design.featured && (
-                  <div className="absolute top-2 left-2 bg-yellow-500 text-white text-xs px-2 py-1 rounded-full">
-                    Nổi bật
-                  </div>
-                )}
-                {design.trending && (
-                  <div className="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full">
-                    Hot
-                  </div>
-                )}
-                {design.price.discount && (
-                  <div className="absolute bottom-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full">
-                    -{design.price.discount}%
-                  </div>
-                )}
-                <motion.button
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                  className="absolute top-2 right-2 p-2 bg-white rounded-full shadow-md hover:bg-gray-100"
-                >
-                  <Heart className="w-4 h-4 text-gray-600" />
-                </motion.button>
-              </div>
+  <img
+    src={design.images[0]}
+    alt={design.title}
+    className={`w-full object-cover ${viewMode === 'list' ? 'h-48' : 'h-64'}`}
+  />
+
+  {/* Watermark overlay */}
+  <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+    <span className="text-white text-3xl font-bold opacity-20 select-none">
+      aodaiverse
+    </span>
+  </div>
+
+  {design.featured && (
+    <div className="absolute top-2 left-2 bg-yellow-500 text-white text-xs px-2 py-1 rounded-full">
+      Nổi bật
+    </div>
+  )}
+  {design.trending && (
+    <div className="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full">
+      Hot
+    </div>
+  )}
+  {design.price.discount && (
+    <div className="absolute bottom-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full">
+      -{design.price.discount}%
+    </div>
+  )}
+  <motion.button
+    whileHover={{ scale: 1.1 }}
+    whileTap={{ scale: 0.9 }}
+    className="absolute top-2 right-2 p-2 bg-white rounded-full shadow-md hover:bg-gray-100"
+  >
+    <Heart className="w-4 h-4 text-gray-600" />
+  </motion.button>
+</div>
+
 
               {/* Design Info */}
               <div className={`p-4 ${viewMode === 'list' ? 'flex-1' : ''}`}>
@@ -449,7 +458,7 @@ const MarketplacePage = () => {
                       </span>
                     )}
                   </div>
-                  <span className="text-sm text-gray-500">{design.sales} đã bán</span>
+                 
                 </div>
 
                 {/* Tags */}

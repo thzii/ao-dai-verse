@@ -74,15 +74,7 @@ const AboutPage = () => {
       <div className="bg-gradient-to-r from-primary-500 to-secondary-500 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="inline-flex items-center space-x-2 bg-white/20 backdrop-blur-md rounded-full px-4 py-2 mb-6"
-            >
-              <Sparkles className="h-5 w-5" />
-              <span className="text-sm font-medium">Về chúng tôi</span>
-            </motion.div>
+          
 
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
@@ -104,6 +96,22 @@ const AboutPage = () => {
               AoDaiVerse là nền tảng số tiên phong kết hợp công nghệ AI, AR và blockchain 
               để bảo tồn và phát huy giá trị văn hóa áo dài Việt Nam trong thời đại số.
             </motion.p>
+            <motion.div
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6, delay: 0.6 }}
+  className="mt-8 flex justify-center"
+>
+  <a
+    href="/contact"
+    className="inline-flex items-center px-6 py-3 rounded-full text-white bg-white/20 hover:bg-white/30 backdrop-blur-lg font-semibold transition duration-300"
+  >
+    <Sparkles className="h-5 w-5 mr-2" />
+    Liên hệ
+  </a>
+</motion.div>
+
+            {/* { name: 'Liên hệ', path: '/contact' }, */}
           </div>
         </div>
       </div>
@@ -305,7 +313,7 @@ const AboutPage = () => {
               <Camera className="h-5 w-5 mr-2" />
               Thử áo AR ngay
             </button>
-            <button className="btn-primary bg-white text-primary-600 hover:bg-gray-100">
+            <button className="btn-primary bg-white text-white-600 hover:bg-gray-100">
               <Sparkles className="h-5 w-5 mr-2" />
               Bắt đầu thiết kế
             </button>

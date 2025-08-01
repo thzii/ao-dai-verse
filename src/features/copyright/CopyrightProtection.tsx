@@ -1,4 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react'
+import des1 from '../../assets/des1.jpg'
+import des2 from '../../assets/des2.jpg'
 import { motion } from 'framer-motion'
 import { 
   Shield, 
@@ -102,7 +104,7 @@ export const CopyrightProtection = () => {
   const designImages: DesignImage[] = [
     {
       id: '1',
-      url: '/images/designs/design1-watermarked.jpg',
+      url: des1,
       originalUrl: '/images/designs/design1-original.jpg',
       watermark: watermarkConfig,
       copyright: copyrightInfo,
@@ -116,7 +118,7 @@ export const CopyrightProtection = () => {
     },
     {
       id: '2',
-      url: '/images/designs/design2-watermarked.jpg',
+      url: des2,
       originalUrl: '/images/designs/design2-original.jpg',
       watermark: watermarkConfig,
       copyright: copyrightInfo,

@@ -14,7 +14,7 @@ import MarketplacePage from './features/marketplace/MarketplacePage'
 import EducationPage from './features/education/EducationPage'
 import CopyrightProtection from './features/copyright/CopyrightProtection'
 import { useLocation } from 'react-router-dom'
-
+import ProfileUser from './pages/ProfilePage'
 function App() {
   const location = useLocation()
 
@@ -42,6 +42,7 @@ function App() {
             <Route path="/marketplace" element={<MarketplacePage />} />
             <Route path="/education" element={<EducationPage />} />
             <Route path="/copyright" element={<CopyrightProtection />} />
+            <Route path="/profileuser" element={<ProfileUser />} />
           </Routes>
         </motion.main>
       </AnimatePresence>

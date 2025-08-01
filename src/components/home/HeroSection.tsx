@@ -60,7 +60,7 @@ const HeroSection = () => {
             >
               <Sparkles className="h-5 w-5 text-secondary-500" />
               <span className="text-sm font-medium text-gray-700">
-                🌸 Tái định nghĩa áo dài thời hiện đại
+                Tái định nghĩa áo dài thời hiện đại
               </span>
             </motion.div>
 

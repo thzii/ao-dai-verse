@@ -57,7 +57,7 @@ export default {
         }
       },
       fontFamily: {
-        'sans': ['Inter', 'system-ui', 'sans-serif'],
+        'sans': ['system-ui', 'sans-serif'],
         'serif': ['Playfair Display', 'Georgia', 'serif'],
         'cursive': ['Dancing Script', 'cursive'],
       },
