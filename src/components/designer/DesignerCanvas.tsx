@@ -2,40 +2,18 @@ import { motion } from 'framer-motion'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls, Environment } from '@react-three/drei'
 import { Suspense } from 'react'
+import { useGLTF } from '@react-three/drei'
+
 
 interface DesignerCanvasProps {
   selectedTool: string
 }
 
-// Placeholder 3D Model Component
 const AoDaiModel = () => {
-  return (
-    <group>
-      {/* Simple Ao Dai Silhouette */}
-      <mesh position={[0, 0, 0]}>
-        <cylinderGeometry args={[0.3, 0.3, 2, 8]} />
-        <meshStandardMaterial color="#d946ef" />
-      </mesh>
-      
-      {/* Collar */}
-      <mesh position={[0, 1, 0]}>
-        <cylinderGeometry args={[0.4, 0.4, 0.2, 8]} />
-        <meshStandardMaterial color="#ef4444" />
-      </mesh>
-      
-      {/* Sleeves */}
-      <mesh position={[-0.5, 0.5, 0]}>
-        <cylinderGeometry args={[0.1, 0.1, 0.8, 8]} />
-        <meshStandardMaterial color="#d946ef" />
-      </mesh>
-      
-      <mesh position={[0.5, 0.5, 0]}>
-        <cylinderGeometry args={[0.1, 0.1, 0.8, 8]} />
-        <meshStandardMaterial color="#d946ef" />
-      </mesh>
-    </group>
-  )
+  const { scene } = useGLTF('/aodailumla.glb')
+  return <primitive object={scene} scale={1.5} />
 }
+
 
 const DesignerCanvas = ({ selectedTool }: DesignerCanvasProps) => {
   return (

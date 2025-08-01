@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
+import aodai from '../../assets/aodai.png'
 import { 
   Sparkles, 
   ArrowRight, 
@@ -172,7 +173,7 @@ const HeroSection = () => {
               </div>
 
               {/* Floating Icons */}
-              <motion.div
+              {/* <motion.div
                 animate={{ 
                   y: [0, -10, 0],
                   rotate: [0, 5, 0]
@@ -185,23 +186,27 @@ const HeroSection = () => {
                 className="absolute top-10 right-10 w-12 h-12 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-md"
               >
                 <Sparkles className="h-6 w-6 text-secondary-500" />
-              </motion.div>
+              </motion.div> */}
 
-              <motion.div
-                animate={{ 
-                  y: [0, 10, 0],
-                  rotate: [0, -5, 0]
-                }}
-                transition={{ 
-                  duration: 5, 
-                  repeat: Infinity, 
-                  ease: "easeInOut",
-                  delay: 1
-                }}
-                className="absolute bottom-10 left-10 w-12 h-12 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-md"
-              >
-                <Camera className="h-6 w-6 text-primary-500" />
-              </motion.div>
+              <div className="absolute inset-0 flex items-center justify-center">
+  <motion.img
+    src={aodai}
+    alt="Áo dài xoay"
+    animate={{
+      rotateY: [0, 360],
+      scale: [1, 1.05, 1],
+    }}
+    transition={{
+      rotateY: { duration: 20, repeat: Infinity, ease: "linear" },
+      scale: { duration: 4, repeat: Infinity, ease: "easeInOut" },
+    }}
+    className="w-80 h-80 object-contain"
+  />
+</div>
+
+
+
+
             </div>
           </motion.div>
         </div>

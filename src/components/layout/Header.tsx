@@ -132,15 +132,16 @@ const Header = () => {
                 </Link>
               ))}
               <div className="pt-4 space-y-3">
-                <button className="w-full btn-primary">
-                  <Camera className="h-4 w-4 mr-2" />
-                  Thử áo AR
-                </button>
+              <Link to="/ar-try-on/start" className="w-full btn-primary inline-flex items-center justify-center">
+    <Camera className="h-4 w-4 mr-2" />
+    Thử áo AR
+  </Link>
                 <button className="w-full btn-secondary">
                   <User className="h-4 w-4 mr-2" />
                   Đăng nhập
                 </button>
               </div>
+
             </nav>
           </motion.div>
         )}

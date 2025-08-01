@@ -38,10 +38,13 @@ const DesignerPage = () => {
             </div>
             
             <div className="flex items-center space-x-4">
-              <button
-                onClick={() => setShowAISuggestions(!showAISuggestions)}
-                className="btn-primary text-sm py-2 px-4"
-              >
+            <button
+  onClick={() => setShowAISuggestions(!showAISuggestions)}
+  className={`btn-primary text-sm py-2 transition-all duration-300 ${
+    showAISuggestions ? 'px-6 w-40' : 'px-4 w-32'
+  }`}
+>
+
                 <Sparkles className="h-4 w-4 mr-2" />
                 AI Gợi ý
               </button>
