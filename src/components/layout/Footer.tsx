@@ -62,7 +62,7 @@ const Footer = () => {
               <Sparkles className="h-8 w-8 text-secondary-400" />
               <div>
                 <h3 className="text-xl font-serif font-bold gradient-text">
-                  Áo DàiVerse
+                  AoDaiVerse
                 </h3>
                 <p className="text-sm text-gray-300">
                   Tái định nghĩa áo dài
@@ -86,7 +86,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3 text-gray-300">
                 <MapPin className="h-4 w-4 text-secondary-400" />
-                <span>Hà Nội, Việt Nam</span>
+                <span>Hồ Chí Minh, Việt Nam</span>
               </div>
             </div>
           </div>
@@ -117,7 +117,7 @@ const Footer = () => {
         <div className="border-t border-gray-700 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="flex items-center space-x-2 text-gray-300">
-              <span>&copy; {currentYear} Áo DàiVerse. Được tạo với</span>
+              <span>&copy; {currentYear} AoDaiVerse. Được tạo với</span>
               <Heart className="h-4 w-4 text-red-500" />
               <span>tại Việt Nam</span>
             </div>

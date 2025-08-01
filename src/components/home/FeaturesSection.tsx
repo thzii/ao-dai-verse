@@ -95,7 +95,7 @@ const FeaturesSection = () => {
           </h2>
           
           <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Áo DàiVerse kết hợp công nghệ AI, AR và blockchain để mang đến 
+            AoDaiVerse kết hợp công nghệ AI, AR và blockchain để mang đến 
             trải nghiệm thiết kế áo dài hiện đại nhất, đồng thời bảo tồn và 
             phát huy giá trị văn hóa truyền thống.
           </p>

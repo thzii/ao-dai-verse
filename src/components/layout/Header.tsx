@@ -21,7 +21,11 @@ const Header = () => {
     { name: 'Thiết kế', path: '/designer' },
     { name: 'AR Thử áo', path: '/ar-try-on' },
     { name: 'Bộ sưu tập', path: '/gallery' },
+    { name: 'Cộng đồng', path: '/community' },
+    { name: 'Chợ thiết kế', path: '/marketplace' },
+    { name: 'Giáo dục', path: '/education' },
     { name: 'Sketch Week', path: '/sketch-week' },
+    { name: 'Bảo vệ bản quyền', path: '/copyright' },
     { name: 'Về chúng tôi', path: '/about' },
     { name: 'Liên hệ', path: '/contact' },
   ]
@@ -52,7 +56,7 @@ const Header = () => {
             </div>
             <div className="flex flex-col">
               <span className="text-xl font-serif font-bold gradient-text">
-                Áo DàiVerse
+                AoDaiVerse
               </span>
               <span className="text-xs text-gray-500 -mt-1">
                 Tái định nghĩa áo dài

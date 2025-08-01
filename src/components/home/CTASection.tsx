@@ -102,7 +102,7 @@ const CTASection = () => {
             viewport={{ once: true }}
             className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"
           >
-            Tham gia cộng đồng Áo Dài Verse và khám phá vẻ đẹp của áo dài Việt Nam 
+            Tham gia cộng đồng AoDaiVerse và khám phá vẻ đẹp của áo dài Việt Nam 
             với công nghệ hiện đại nhất.
           </motion.p>
 
