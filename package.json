@@ -50,7 +50,7 @@
     "react-window-infinite-loader": "^1.0.7",
     "react-infinite-scroll-component": "^6.1.0",
     "react-lazy-load-image-component": "^1.6.0",
-    "react-image-magnify": "^3.0.0",
+    "react-image-magnify": "^2.7.3",
     "react-image-zoom": "^1.0.0",
     "react-image-gallery": "^1.2.11",
     "react-lightbox-component": "^3.0.0",
