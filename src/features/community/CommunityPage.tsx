@@ -82,13 +82,13 @@ const CommunityPage = () => {
       author: {
         id: '1',
         name: 'Nguyễn Thị Mai',
-        avatar: '/images/avatars/user1.jpg',
+        avatar: '/image/per1.jpg',
         role: 'designer'
       },
       type: 'image',
       content: {
         text: 'Mẫu áo dài mới nhất của tôi lấy cảm hứng từ hoa sen truyền thống. Các bạn thấy thế nào?',
-        images: ['/images/posts/design1.jpg', '/images/posts/design2.jpg']
+        images: ['/image/aodai1.jpg', '/image/aodai2.jpg']
       },
       likes: 45,
       comments: 12,
@@ -103,9 +103,10 @@ const CommunityPage = () => {
       author: {
         id: '2',
         name: 'Trần Văn Hùng',
-        avatar: '/images/avatars/user2.jpg',
+        avatar: '/image/per2.jpg',
         role: 'user'
       },
+
       type: 'text',
       content: {
         text: 'Ai có thể tư vấn cho tôi về cách chọn chất liệu vải phù hợp cho áo dài cưới không? Tôi đang chuẩn bị cho ngày cưới sắp tới.'
@@ -123,13 +124,13 @@ const CommunityPage = () => {
       author: {
         id: '3',
         name: 'Lê Thị Hoa',
-        avatar: '/images/avatars/user3.jpg',
+        avatar: '/image/per3.jpg',
         role: 'designer'
       },
       type: 'video',
       content: {
         text: 'Video hướng dẫn cách may áo dài ngũ thân truyền thống. Hy vọng sẽ giúp ích cho các bạn!',
-        video: '/videos/tutorial1.mp4'
+        // video: 'https://www.youtube.com/embed/Kstrszax2ss'
       },
       likes: 67,
       comments: 25,
