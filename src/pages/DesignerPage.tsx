@@ -36,19 +36,17 @@ const DesignerPage = () => {
               <h1 className="text-2xl font-bold gradient-text">Thiết kế áo dài</h1>
               <p className="text-gray-600">Tạo áo dài cá nhân hóa với AI</p>
             </div>
-            
+  
             <div className="flex items-center space-x-4">
-            <button
-  onClick={() => setShowAISuggestions(!showAISuggestions)}
-  className={`btn-primary text-sm py-2 transition-all duration-300 ${
-    showAISuggestions ? 'px-6 w-40' : 'px-4 w-32'
-  }`}
->
-
+              <button
+                onClick={() => setShowAISuggestions(!showAISuggestions)}
+                className={`btn-primary text-sm py-2 transition-all duration-300 ${
+                  showAISuggestions ? 'px-6 w-40' : 'px-4 w-32'
+                }`}
+              >
                 <Sparkles className="h-4 w-4 mr-2" />
                 AI Gợi ý
               </button>
-              
               <button className="btn-secondary text-sm py-2 px-4">
                 <Camera className="h-4 w-4 mr-2" />
                 Thử áo AR
@@ -57,49 +55,60 @@ const DesignerPage = () => {
           </div>
         </div>
       </div>
-
+  
       <div className="flex h-[calc(100vh-120px)]">
         {/* Left Panel - Tools */}
-        <div className="w-80 bg-white border-r border-gray-200 overflow-y-auto">
-          <DesignerPanel 
-            selectedTool={selectedTool}
-            onToolChange={setSelectedTool}
-            tools={tools}
-          />
+        <div className="w-96 bg-white border-r border-gray-200 overflow-y-auto">
+          <DesignerPanel selectedTool={selectedTool} onToolChange={setSelectedTool} tools={tools} />
         </div>
-
+  
         {/* Center - Canvas */}
-        <div className="flex-1 relative">
-          <DesignerCanvas selectedTool={selectedTool} />
-          
-          {/* Canvas Controls */}
-          <div className="absolute top-4 right-4 flex items-center space-x-2">
-            <button className="p-2 bg-white/80 backdrop-blur-sm rounded-lg shadow-lg hover:bg-white transition-colors">
-              <RotateCcw className="h-5 w-5 text-gray-600" />
-            </button>
-            <button className="p-2 bg-white/80 backdrop-blur-sm rounded-lg shadow-lg hover:bg-white transition-colors">
-              <Download className="h-5 w-5 text-gray-600" />
-            </button>
-            <button className="p-2 bg-white/80 backdrop-blur-sm rounded-lg shadow-lg hover:bg-white transition-colors">
-              <Share2 className="h-5 w-5 text-gray-600" />
-            </button>
+        <div className="flex-1 relative flex flex-col">
+          <div className="flex-1 relative">
+            <DesignerCanvas selectedTool={selectedTool} />
+  
+            {/* Canvas Controls */}
+            <div className="absolute top-4 right-4 flex items-center space-x-2">
+              <button className="p-2 bg-white/80 backdrop-blur-sm rounded-lg shadow-lg hover:bg-white transition-colors">
+                <RotateCcw className="h-5 w-5 text-gray-600" />
+              </button>
+              <button className="p-2 bg-white/80 backdrop-blur-sm rounded-lg shadow-lg hover:bg-white transition-colors">
+                <Download className="h-5 w-5 text-gray-600" />
+              </button>
+              <button className="p-2 bg-white/80 backdrop-blur-sm rounded-lg shadow-lg hover:bg-white transition-colors">
+                <Share2 className="h-5 w-5 text-gray-600" />
+              </button>
+            </div>
           </div>
         </div>
-
-        {/* Right Panel - AI Suggestions */}
-        {showAISuggestions && (
-          <motion.div
-            initial={{ x: 400 }}
-            animate={{ x: 0 }}
-            exit={{ x: 400 }}
-            className="w-80 bg-white border-l border-gray-200 overflow-y-auto"
-          >
-            <AISuggestions />
-          </motion.div>
-        )}
+  
+        {/* Right Panel - Design Preview */}
+        <div className="w-96 bg-white border-l border-gray-200 overflow-y-auto relative">
+          <div className="p-4">
+            <h2 className="text-lg font-semibold text-gray-700 mb-2">Xem trước thiết kế</h2>
+            <img
+              src="/design-preview.jpg"
+              alt="Xem trước"
+              className="rounded-lg border shadow-md object-contain w-full h-auto"
+            />
+          </div>
+  
+          {/* AI Suggestions Overlay */}
+          {showAISuggestions && (
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 50 }}
+              className="absolute top-0 left-0 right-0 bottom-0 bg-white/95 backdrop-blur-md z-10 p-4"
+            >
+              <AISuggestions />
+            </motion.div>
+          )}
+        </div>
       </div>
     </div>
   )
+  
 }
 
 export default DesignerPage 

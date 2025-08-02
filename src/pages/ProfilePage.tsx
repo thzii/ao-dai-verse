@@ -1,23 +1,23 @@
 import React from 'react'
 
 const connectedStylists = [
-  { id: 1, name: 'Nguyễn Trâm', avatar: '/stylists/tram.png' },
-  { id: 2, name: 'Lê Linh', avatar: '/stylists/linh.png' }
+  { id: 1, name: 'Nguyễn Trâm', avatar: '/image/per1.jpg' },
+  { id: 2, name: 'Lê Linh', avatar: '/image/per2.jpg' }
 ]
 
 const savedDesigns = [
-  { id: 101, title: 'Sen Hồng', image: '/designs/sen.png' },
-  { id: 102, title: 'Trống Đồng', image: '/designs/trongdong.png' }
+  { id: 101, title: 'Sen Hồng', image: '/image/aodai3.jpg' },
+  { id: 102, title: 'Trúc Viên', image: '/image/aodai2.jpg' }
 ]
 
 const purchasedDesigns = [
-  { id: 201, title: 'Nhật Bình', image: '/designs/nhatbinh.png', qr: '/qr/nhatbinh.svg' },
-  { id: 202, title: 'Mẫu Đơn', image: '/designs/maudon.png', qr: '/qr/maudon.svg' }
+  { id: 201, title: 'Nhật Bình', image: '/image/aodaimua.jpg', qr: '/qr/qr1.svg' },
+  { id: 202, title: 'Mẫu Đơn', image: '/image/aodaimua1.jpg', qr: 'qr/qr2.svg' }
 ]
 
 const Section = ({ title, children }) => (
   <section className="space-y-4">
-    <h2 className="text-2xl font-bold text-[#14532d] border-l-4 border-[#4ade80] pl-3">
+    <h2 className="text-2xl font-bold text-[#2e1065] border-l-4 border-[#c084fc] pl-3">
       {title}
     </h2>
     {children}
@@ -26,10 +26,10 @@ const Section = ({ title, children }) => (
 
 const ProfilePage = () => {
   return (
-    <div className="max-w-7xl mx-auto px-6 py-12 space-y-16 bg-gradient-to-b from-[#f0fdf4] via-[#ecfdf5] to-[#e0f2fe] text-[#1e1e1e] font-sans">
+    <div className="max-w-7xl mx-auto px-6 py-12 space-y-16 bg-gradient-to-b from-[#fff1f2] via-[#fdf4ff] to-[#f0f9ff] text-[#1e1e1e] font-sans">
       <div className="text-center space-y-2">
-        <h1 className="text-4xl font-extrabold tracking-tight text-[#065f46]">Hồ sơ của bạn</h1>
-        <p className="text-[#4b5563] text-sm">Khám phá các kết nối và thiết kế cá nhân</p>
+        <h1 className="text-4xl font-extrabold tracking-tight text-[#4c1d95]">Hồ sơ của bạn</h1>
+        <p className="text-[#6b7280] text-sm">Khám phá các kết nối và thiết kế cá nhân</p>
       </div>
 
       <Section title="Stylist đã kết nối">
@@ -42,9 +42,9 @@ const ProfilePage = () => {
               <img
                 src={stylist.avatar}
                 alt={stylist.name}
-                className="w-16 h-16 rounded-full object-cover shadow-md border-2 border-[#22c55e]"
+                className="w-16 h-16 rounded-full object-cover shadow-md border-2 border-[#a855f7]"
               />
-              <span className="text-sm font-medium text-[#065f46]">{stylist.name}</span>
+              <span className="text-sm font-medium text-[#4c1d95]">{stylist.name}</span>
             </div>
           ))}
         </div>
@@ -55,17 +55,20 @@ const ProfilePage = () => {
           {savedDesigns.map((design) => (
             <div
               key={design.id}
-              className="relative rounded-xl overflow-hidden bg-white border border-green-200 shadow-sm hover:shadow-md transition"
+              className="relative rounded-xl overflow-hidden bg-white border border-purple-200 shadow-sm hover:shadow-md transition"
             >
               <img
                 src={design.image}
                 alt={design.title}
                 className="w-full h-48 object-cover"
               />
-              <div className="absolute bottom-2 right-2 bg-green-600 text-white text-xs px-2 py-0.5 rounded-full">
-                aodaiverse
-              </div>
-              <div className="p-3 text-sm font-semibold text-[#065f46]">{design.title}</div>
+              <div className="absolute inset-0 flex items-center justify-center">
+  <span className="text-white font-bold text-5  xl px-3 py-1 rounded rotate-12 opacity-50 tracking-wider">
+    aodaiverse
+  </span>
+</div>
+
+              <div className="p-3 text-sm font-semibold text-[#4c1d95]">{design.title}</div>
             </div>
           ))}
         </div>
@@ -76,7 +79,7 @@ const ProfilePage = () => {
           {purchasedDesigns.map((design) => (
             <div
               key={design.id}
-              className="relative rounded-xl overflow-hidden bg-white border border-green-200 shadow-sm hover:shadow-md transition"
+              className="relative rounded-xl overflow-hidden bg-white border border-purple-200 shadow-sm hover:shadow-md transition"
             >
               <img
                 src={design.image}
@@ -86,7 +89,7 @@ const ProfilePage = () => {
               <div className="absolute bottom-2 right-2 w-10 h-10 bg-white p-1 rounded border border-neutral-300 shadow">
                 <img src={design.qr} alt="QR" className="w-full h-full object-contain" />
               </div>
-              <div className="p-3 text-sm font-semibold text-[#065f46]">{design.title}</div>
+              <div className="p-3 text-sm font-semibold text-[#4c1d95]">{design.title}</div>
             </div>
           ))}
         </div>
