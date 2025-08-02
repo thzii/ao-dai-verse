@@ -15,7 +15,7 @@
     "bootstrap": "^5.3.2",
     "framer-motion": "^10.16.1",
     "gl-react": "^5.1.0",
-    "gl-react-dom": "^4.0.1",
+    "gl-react-dom": "^5.0.0",
     "gsap": "^3.12.2",
     "konva": "^9.3.5",
     "node-sass": "^9.0.0",
